@@ -1,0 +1,147 @@
+:root {
+  --default-color: #2a56e8;
+  --default-hover-color: #2449cb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--default-color);
+  padding: 30px;
+}
+
+.container {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.container .cover {
+  top: 0;
+  left: 50%;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--default-color);
+}
+
+.container form {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.container .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form {
+  width: calc(100% / 2 - 25px);
+}
+
+form .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+form .form-content .title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: var(--default-color);
+}
+
+form .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+form .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 17px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+  border-color: var(--default-color);
+}
+
+form .form-content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+form .form-content .text a {
+  color: var(--default-color);
+  text-decoration: none;
+}
+
+form .form-content .text a:visited {
+  color: var(--default-color);
+}
+
+form .form-content .text a:hover {
+  color: var(--default-hover-color);
+  text-decoration: underline;
+}
+
+form .form-content .button {
+  color: #fff;
+  margin-top: 40px;
+}
+
+form .form-content .button input {
+  color: #fff;
+  background: var(--default-color);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+form .form-content .button input:hover {
+  background: var(--default-hover-color);
+}
+
+.icon {
+  position: absolute;
+  fill: var(--default-color);
+}
