@@ -1,0 +1,175 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 웹 문서에서 공통으로 사용될 속성을 미리 변수 선언 */
+:root {
+  /* colors */
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #695CFE;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+
+  /* transition */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+/* default */
+* {
+  font-family: 'Poppins', sans-serif;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-color);
+}
+
+/* menu > sidebar */
+.menu-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: var(--sidebar-color)
+}
+
+.menu-sidebar.fold {
+  width: 70px;
+}
+
+.menu-sidebar .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color)
+}
+
+.menu-sidebar.fold .text{
+  opacity: 0;
+}
+
+.menu-sidebar .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.menu-sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-sidebar .header .image img.logo {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.menu-sidebar .header .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-sidebar .header .header-text .name {
+  font-weight: 600;
+}
+
+.menu-sidebar .header .header-text .profession {
+  margin-top: -2px;
+}
+
+.menu-sidebar .header .btn-sidebar-close {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--sidebar-color);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-sidebar .body ul.menu-links {
+}
+
+.menu-sidebar .body li {
+  height: 50px;
+  margin-top: 10px;
+  padding: 0 5px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-sidebar .body li.search-box {
+  background: var(--primary-color-light);
+}
+
+.menu-sidebar .body li.search-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary-color-light);
+}
+
+.menu-sidebar .body li .icon {
+  min-width: 60px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-sidebar .body li .icon,
+.menu-sidebar .body li .text {
+  color: var(--text-color);
+  transition: var(--tran-02);
+}
+
+.menu-sidebar .body li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: var(--tran-02);
+}
+
+.menu-sidebar .body li a:hover {
+  background: var(--primary-color);
+}
+
+.menu-sidebar .body li a:hover .icon,
+.menu-sidebar .body li a:hover .text {
+  color: var(--sidebar-color);
+}
+
+.menu-sidebar .body {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-sidebar.fold .body {
+  height: calc(100% - 75px);
+}
